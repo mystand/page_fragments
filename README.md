@@ -15,14 +15,14 @@ First, execute
 
 this create config/page_fragments.rb when you write you templates
 
-    ```ruby
-    PageFragment.templates do
-      #fragment :fragment_type, :fragment_key
+```ruby
+PageFragment.templates do
+  #fragment :fragment_type, :fragment_key
 
-      fragment :string, :header
-      fragment :text, :about
-    end
-    ```
+  fragment :string, :header
+  fragment :text, :about
+end
+```
 
 After edit templates config you should execute 'rake pf:init'. This create templates in your database.
 
@@ -42,14 +42,9 @@ It will copy all views to your application:
 
 In you view:
 
-    ```erb
-    PageFragment.templates do
-      #fragment :fragment_type, :fragment_key
-
-      fragment :string, :header
-      fragment :text, :about
-    end
-    ```
+```erb
+<%= render_page_fragment :key_of_fragment %>
+```
 
 ## Authors
 
