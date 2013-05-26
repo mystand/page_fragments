@@ -1,0 +1,11 @@
+= form_for @page_fragment, :as => :page_fragment, :url => url_for(:action => :update, :id => @page_fragment.id) do |f|
+  %fieldset
+    %legend= @page_fragment.short_name
+
+    %div
+      = f.label :content
+      %br
+      = f.text_area :content
+
+    = f.submit "Save"
+    = link_to "Cancel", url_for(:action => :index)

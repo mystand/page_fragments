@@ -1,0 +1,11 @@
+.page-fragments
+  %h2="Page Fragments"
+  %table
+    %thead
+      %th= "Name"
+      %th
+    - @page_fragments.each do |page_fragment|
+      %tr
+        %td= page_fragment.short_name
+        %td
+          = link_to "Edit", url_for(:action => :edit, :id => page_fragment.id)
