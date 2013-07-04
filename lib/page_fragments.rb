@@ -18,5 +18,4 @@ module PageFragments
 
   class Engine < Rails::Engine
   end
-
 end
