@@ -1,7 +1,6 @@
 module PageFragments
   class PageFragment < ActiveRecord::Base
     default_scope where(:hidden => false) if self.column_names.include?('hidden')
-    attr_accessible :key, :content
 
     KEY_REGEXP = /^[a-z_.]+$/
     AVAILABLE_CONTENT_TYPES = [:text, :string, :integer]
