@@ -2,7 +2,7 @@ module PageFragments
   class PageFragment < ActiveRecord::Base
     default_scope where(:hidden => false) if self.column_names.include?('hidden')
 
-    KEY_REGEXP = /^[a-z_.]+$/
+    KEY_REGEXP = /\A[a-z_.]+\z/
     AVAILABLE_CONTENT_TYPES = [:text, :string, :integer]
 
     before_save :validate
