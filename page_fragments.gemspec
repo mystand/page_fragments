@@ -12,7 +12,7 @@ Gem::Specification.new do |gem|
   gem.summary       = gem.description
   gem.homepage      = "http://mystand.ru/"
 
-  gem.files         = `git ls-files`.split(/\z/)
+  gem.files         = `git ls-files`.split($/)
   gem.require_paths = ["lib"]
 
   gem.required_ruby_version = ">= 1.9.2"
